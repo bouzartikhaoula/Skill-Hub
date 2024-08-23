@@ -10,7 +10,7 @@ const Navbartop = () => {
 
   return (
     <>
-      <Navbar  expand="lg">
+      <Navbar className="mt-4 mb-5"  expand="lg">
         <Container>
           <Nav.Link className="navbar-brand" as={NavLink} to="/" href="#home">
           <Image src={logo} rounded />
