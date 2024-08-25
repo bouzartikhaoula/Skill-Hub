@@ -40,6 +40,6 @@ Nav{
  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 17px 20px 108px 8px, rgba(255, 255, 255, 0.5) 19px 20px 20px 0px;
 }
-.card{
+.nonborder .card{
     border: 0 !important;
 }

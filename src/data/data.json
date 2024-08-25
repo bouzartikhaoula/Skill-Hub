@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "titel": "Graphic design course",
+        "imgUrl": "./image/graphique.png",
+        "price": "119.99$",
+        "vue": "25k+ Student"
+    },
+    {
+        "id": 2,
+        "titel": "Illustration design course",
+        "imgUrl": "image/illustrator.png",
+        "price": "119.99$",
+        "vue": "25k+ Student"
+    },
+    {
+        "id": 3,
+        "titel": "UI/UX design course",
+        "imgUrl": "./image/ui ux.png",
+        "price": "119.99$",
+        "vue": "25k+ Student"
+    },
+    {
+        "id": 4,
+        "titel": "Web development",
+        "imgUrl": "./image/web.png",
+        "price": "119.99$",
+        "vue": "25k+ Student"
+    }
+]

@@ -1,9 +1,20 @@
 import React from "react";
-import { Button, Card, Col, Container, Form, Image, Row } from "react-bootstrap";
+import {
+  Button,
+  Card,
+  Col,
+  Container,
+  Form,
+  Image,
+  Row,
+} from "react-bootstrap";
 import image1 from "../img/imag1.png";
 import image2 from "../img/image2.png";
 import image3 from "../img/image3.png";
-import iconFolder from "../img/iconFolder.png"
+import iconFolder from "../img/iconFolder.png";
+import Data from "../data/data.json";
+
+import CoursSlide from "../component/CoursSlide";
 
 const Home = () => {
   return (
@@ -60,86 +71,93 @@ const Home = () => {
         </div>
       </div>
       {/* section 3 */}
+      <section className="nonborder">
+        <div className="text-center mt-5">
+          <h1 style={{ fontSize: " 60px" }}>How it works</h1>
+          <p style={{ fontSize: " 20px" }}>
+            Non-disclosure agreement seed round seed money <br /> accelerator
+            influencer.
+          </p>
+        </div>
+        <Row className="pt-5 mt-5">
+          <Col xs lg="6" sm="12">
+            <Card className="startCard">
+              <Card.Body>
+                <Row>
+                  <Col xs={1}>
+                    <Card.Img className="icon pt-2" src={iconFolder} />
+                  </Col>
+
+                  <Col>
+                    <Card.Title style={{ fontSize: "40px" }}>
+                      Select a course
+                    </Card.Title>
+                    <Card.Text className="pt-3 pb-3">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+
+            <Card className="mt-4">
+              <Card.Body>
+                <Row>
+                  <Col xs={1}>
+                    <Card.Img className="icon pt-2" src={iconFolder} />
+                  </Col>
+
+                  <Col>
+                    <Card.Title style={{ fontSize: "40px" }}>
+                      Select a course
+                    </Card.Title>
+                    <Card.Text className="pt-3 pb-3">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+            <Card className="mt-4">
+              <Card.Body>
+                <Row>
+                  <Col xs={1}>
+                    <Card.Img className="icon pt-2" src={iconFolder} />
+                  </Col>
+
+                  <Col>
+                    <Card.Title style={{ fontSize: "40px" }}>
+                      Select a course
+                    </Card.Title>
+                    <Card.Text className="pt-3 pb-3">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </Card.Text>
+                  </Col>
+                </Row>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col xs lg="6" sm="12">
+            <Image className="w-100" src={image3} />
+          </Col>
+        </Row>
+      </section>
+      {/* section 4 */}
       <section>
-       <div className="text-center mt-5" >
-       <h1 style={{fontSize:" 60px"}}>How it works</h1>
-       <p style={{fontSize:" 20px"}}>Non-disclosure agreement seed round seed money <br/> accelerator influencer.</p>
-       </div>
-       <Row className="pt-5 mt-5">
-        <Col>
-        <Card className="startCard" >
-       
-      <Card.Body>
-       <Row>
-<Col xs={1}>
-<Card.Img className="icon pt-2"  src={iconFolder} />
-
-</Col>       
-        
-       
-       <Col>
-       <Card.Title style={{fontSize: "40px"}}>Select a course
-       </Card.Title>
-        <Card.Text className="pt-3 pb-3">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-       </Col>
+        <div className="text-center mt-5">
+          <h1 style={{ fontSize: " 60px" }}>Our popular courses</h1>
+          <p style={{ fontSize: " 20px" }}>
+            Non-disclosure agreement seed round seed <br /> money accelerator
+            influencer.
+          </p>
+        </div>
+        <Row> 
+          {Data.map(item => (
+          <CoursSlide key={item.id} {...item} />))}
         </Row>
-
-      </Card.Body>
-        </Card>
-
-        <Card className="mt-4" >
-       
-      <Card.Body>
-       <Row>
-<Col xs={1}>
-<Card.Img className="icon pt-2"  src={iconFolder} />
-
-</Col>       
-        
-       
-       <Col>
-       <Card.Title style={{fontSize: "40px"}}>Select a course
-       </Card.Title>
-        <Card.Text className="pt-3 pb-3">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-       </Col>
-        </Row>
-
-      </Card.Body>
-    </Card>
-    <Card className="mt-4" >
-       
-      <Card.Body>
-       <Row>
-<Col xs={1}>
-<Card.Img className="icon pt-2"  src={iconFolder} />
-
-</Col>       
-        
-       
-       <Col>
-       <Card.Title style={{fontSize: "40px"}}>Select a course
-       </Card.Title>
-        <Card.Text className="pt-3 pb-3">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-       </Col>
-        </Row>
-
-      </Card.Body>
-    </Card>
-
-        </Col>
-        <Col>
-        <Image className="w-100" src={image3}/>
-        </Col>
-       </Row>
       </section>
     </Container>
   );
