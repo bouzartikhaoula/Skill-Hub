@@ -11,7 +11,7 @@ Nav{
     color: #3fba96 !important;
 
 }
- Button{
+ Button:not(.slick-arrow){
     background-color: #3fba96 !important;
     border: #3fba96 !important;
     padding:8px 18px !important;
@@ -42,4 +42,8 @@ Nav{
 }
 .nonborder .card{
     border: 0 !important;
+}
+.slick-next:before , .slick-prev:before {
+   color: #3fba96 !important;
+    
 }

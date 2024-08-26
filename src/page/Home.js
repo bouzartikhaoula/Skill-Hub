@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   Button,
   Card,
@@ -11,12 +11,26 @@ import {
 import image1 from "../img/imag1.png";
 import image2 from "../img/image2.png";
 import image3 from "../img/image3.png";
+import image4 from "../img/image4A.png";
+import image5 from "../img/image4g.png";
+
 import iconFolder from "../img/iconFolder.png";
 import Data from "../data/data.json";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import CoursSlide from "../component/CoursSlide";
 
 const Home = () => {
+  //to add the slid in react
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+  };
   return (
     <Container>
       {/* section 1 */}
@@ -146,7 +160,7 @@ const Home = () => {
         </Row>
       </section>
       {/* section 4 */}
-      <section>
+      <section className="pb-4">
         <div className="text-center mt-5">
           <h1 style={{ fontSize: " 60px" }}>Our popular courses</h1>
           <p style={{ fontSize: " 20px" }}>
@@ -154,9 +168,43 @@ const Home = () => {
             influencer.
           </p>
         </div>
-        <Row> 
-          {Data.map(item => (
-          <CoursSlide key={item.id} {...item} />))}
+        <div className="slider-container">
+          <Slider {...settings}>
+            {Data.map((item) => (
+              <CoursSlide key={item.id} {...item} />
+            ))}
+          </Slider>{" "}
+        </div>
+      </section>
+      {/* section 5 */}
+      <section className="mt-5 mb-5">
+        <Row>
+          <Col xs lg="5">
+            <Image className="w-100 " src={image4} />
+          </Col>
+          <Col className="align-self-center row">
+            <div className="col-lg-8 align-self-center">
+              <h1 style={{fontSize: "38px"}}>Do you have any query?</h1>
+            <p style={{fontSize: "20px"}}>Non-disclosure agreement seed.</p>
+              <Form inline>
+        <Row>
+          <Col xs="auto" >
+            <Form.Control 
+              type="text"
+              placeholder="Search"
+              className=" Searchbar mr-sm-2"
+            />
+          </Col>
+          <Col xs="auto">
+            <Button type="submit">Submit</Button>
+          </Col>
+        </Row>
+      </Form>
+            </div>
+            <div className="col-lg-4">
+              <Image className="w-100 "  src={image5} />
+            </div>
+          </Col>
         </Row>
       </section>
     </Container>
