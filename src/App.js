@@ -7,6 +7,7 @@ import AboutUS from './page/AboutUs'
 import Courses from './page/Courses'
 import OnlineLearning from './page/OnlineLearning'
 import Resources from './page/Resources'
+import Footer from './component/Footer'
 
 
 
@@ -25,6 +26,7 @@ const App = () => {
 
         <Route path="*"  element={<div className="text-center text-danger">Page not found</div>} />
       </Routes>
+      <Footer/>
     </>
   )
 }
